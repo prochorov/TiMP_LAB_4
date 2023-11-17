@@ -1,0 +1,185 @@
+\hypertarget{classCipher}{}\doxysection{Класс Cipher}
+\label{classCipher}\index{Cipher@{Cipher}}
+
+
+Класс, реализующий шифрование на основе таблицы  
+
+
+
+
+{\ttfamily \#include $<$Table\+Cipher.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCipher_ae728d0917db639dd49638a268298391f}\label{classCipher_ae728d0917db639dd49638a268298391f}} 
+\mbox{\hyperlink{classCipher_ae728d0917db639dd49638a268298391f}{Cipher}} ()=delete
+\begin{DoxyCompactList}\small\item\em Удаленный конструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCipher_ac3041c659b85cbc57a539ff585a7f46b}{Cipher}} (const std\+::string \&skey)
+\begin{DoxyCompactList}\small\item\em Параметризованный конструктор для инициализации ключа \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCipher_aa32a150f479a1cfa15e76803a98d32cd}{encrypt}} (const std\+::string \&open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Шифрует открытый текст на основе таблицы \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCipher_ae1e9c92f816c2dfda566a8c37e6bf740}{decrypt}} (const std\+::string \&cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Дешифрует зашифрованный текст на основе таблицы \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classCipher_af6bf6f642447301a472641e210d4d309}{get\+Valid\+Open\+Text}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Проверяет и возвращает валидный открытый текст \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCipher_acc909c4d4e409d9548b0084132670396}{get\+Valid\+Cipher\+Text}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Проверяет и возвращает валидный зашифрованный текст \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCipher_ae7adaed1ed80f539901b8e6285dd7cf4}{get\+Valid\+Key}} (const int \mbox{\hyperlink{classCipher_a15e421257e8944e9a79a80d4bfce49aa}{key}}, const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Проверяет и возвращает валидный ключ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCipher_a15e421257e8944e9a79a80d4bfce49aa}\label{classCipher_a15e421257e8944e9a79a80d4bfce49aa}} 
+int \mbox{\hyperlink{classCipher_a15e421257e8944e9a79a80d4bfce49aa}{key}}
+\begin{DoxyCompactList}\small\item\em Ключ для шифрования на основе таблицы \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, реализующий шифрование на основе таблицы 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCipher_ac3041c659b85cbc57a539ff585a7f46b}\label{classCipher_ac3041c659b85cbc57a539ff585a7f46b}} 
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{Cipher()}{Cipher()}}
+{\footnotesize\ttfamily Cipher\+::\+Cipher (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{skey }\end{DoxyParamCaption})}
+
+
+
+Параметризованный конструктор для инициализации ключа 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em skey} & Ключ в виде строки \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCipher_ae1e9c92f816c2dfda566a8c37e6bf740}\label{classCipher_ae1e9c92f816c2dfda566a8c37e6bf740}} 
+\index{Cipher@{Cipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::string Cipher\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cipher\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Дешифрует зашифрованный текст на основе таблицы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cipher\+\_\+text} & Входной зашифрованный текст \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если зашифрованный текст пуст или содержит недопустимые символы \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Расшифрованный текст 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_aa32a150f479a1cfa15e76803a98d32cd}\label{classCipher_aa32a150f479a1cfa15e76803a98d32cd}} 
+\index{Cipher@{Cipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::string Cipher\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Шифрует открытый текст на основе таблицы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em open\+\_\+text} & Входной открытый текст \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если открытый текст пуст или содержит недопустимые символы \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Зашифрованный текст 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_acc909c4d4e409d9548b0084132670396}\label{classCipher_acc909c4d4e409d9548b0084132670396}} 
+\index{Cipher@{Cipher}!getValidCipherText@{getValidCipherText}}
+\index{getValidCipherText@{getValidCipherText}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{getValidCipherText()}{getValidCipherText()}}
+{\footnotesize\ttfamily std\+::string Cipher\+::get\+Valid\+Cipher\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Проверяет и возвращает валидный зашифрованный текст 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Входной зашифрованный текст \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Валидный зашифрованный текст 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если зашифрованный текст пуст или содержит недопустимые символы \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCipher_ae7adaed1ed80f539901b8e6285dd7cf4}\label{classCipher_ae7adaed1ed80f539901b8e6285dd7cf4}} 
+\index{Cipher@{Cipher}!getValidKey@{getValidKey}}
+\index{getValidKey@{getValidKey}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{getValidKey()}{getValidKey()}}
+{\footnotesize\ttfamily int Cipher\+::get\+Valid\+Key (\begin{DoxyParamCaption}\item[{const int}]{key,  }\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Проверяет и возвращает валидный ключ 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & Входной ключ \\
+\hline
+{\em s} & Исходная строка ключа (для сообщений об ошибках) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+int Валидный ключ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если ключ отрицательный или не является числом \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCipher_af6bf6f642447301a472641e210d4d309}\label{classCipher_af6bf6f642447301a472641e210d4d309}} 
+\index{Cipher@{Cipher}!getValidOpenText@{getValidOpenText}}
+\index{getValidOpenText@{getValidOpenText}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{getValidOpenText()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::string Cipher\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Проверяет и возвращает валидный открытый текст 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Входной открытый текст \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Валидный открытый текст 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcipher__error}{cipher\+\_\+error}}} & Если открытый текст пуст или содержит недопустимые символы \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TableCipher_8h}{Table\+Cipher.\+h}}\item 
+Table\+Cipher.\+cpp\end{DoxyCompactItemize}
