@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>modAlphaCipher: Исходный файл TableCipher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">modAlphaCipher
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TableCipher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="TableCipher_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef TABLECIPHER_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define TABLECIPHER_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classCipher.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCipher.html">Cipher</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classCipher.html#a15e421257e8944e9a79a80d4bfce49aa">   24</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCipher.html#a15e421257e8944e9a79a80d4bfce49aa">key</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classCipher.html#af6bf6f642447301a472641e210d4d309">   32</a></span>&#160;    std::string <a class="code" href="classCipher.html#af6bf6f642447301a472641e210d4d309">getValidOpenText</a>(<span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classCipher.html#acc909c4d4e409d9548b0084132670396">   40</a></span>&#160;    std::string <a class="code" href="classCipher.html#acc909c4d4e409d9548b0084132670396">getValidCipherText</a>(<span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classCipher.html#ae7adaed1ed80f539901b8e6285dd7cf4">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCipher.html#ae7adaed1ed80f539901b8e6285dd7cf4">getValidKey</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classCipher.html#a15e421257e8944e9a79a80d4bfce49aa">key</a>, <span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classCipher.html#ae728d0917db639dd49638a268298391f">   53</a></span>&#160;    <a class="code" href="classCipher.html#ae728d0917db639dd49638a268298391f">Cipher</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classCipher.html#ae728d0917db639dd49638a268298391f">Cipher</a>(<span class="keyword">const</span> std::string&amp; skey);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string <a class="code" href="classCipher.html#aa32a150f479a1cfa15e76803a98d32cd">encrypt</a>(<span class="keyword">const</span> std::string&amp; open_text);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string <a class="code" href="classCipher.html#ae1e9c92f816c2dfda566a8c37e6bf740">decrypt</a>(<span class="keyword">const</span> std::string&amp; cipher_text);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classcipher__error.html">   82</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcipher__error.html">cipher_error</a>: <span class="keyword">public</span> std::invalid_argument</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html">cipher_error</a> (<span class="keyword">const</span> std::string&amp; what_arg):</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::invalid_argument(what_arg) {}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html">cipher_error</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::invalid_argument(what_arg) {}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassCipher_html"><div class="ttname"><a href="classCipher.html">Cipher</a></div><div class="ttdoc">Класс, реализующий шифрование на основе таблицы</div><div class="ttdef"><b>Definition:</b> TableCipher.h:22</div></div>
+<div class="ttc" id="aclassCipher_html_a15e421257e8944e9a79a80d4bfce49aa"><div class="ttname"><a href="classCipher.html#a15e421257e8944e9a79a80d4bfce49aa">Cipher::key</a></div><div class="ttdeci">int key</div><div class="ttdoc">Ключ для шифрования на основе таблицы</div><div class="ttdef"><b>Definition:</b> TableCipher.h:24</div></div>
+<div class="ttc" id="aclassCipher_html_aa32a150f479a1cfa15e76803a98d32cd"><div class="ttname"><a href="classCipher.html#aa32a150f479a1cfa15e76803a98d32cd">Cipher::encrypt</a></div><div class="ttdeci">std::string encrypt(const std::string &amp;open_text)</div><div class="ttdoc">Шифрует открытый текст на основе таблицы</div><div class="ttdef"><b>Definition:</b> TableCipher.cpp:18</div></div>
+<div class="ttc" id="aclassCipher_html_acc909c4d4e409d9548b0084132670396"><div class="ttname"><a href="classCipher.html#acc909c4d4e409d9548b0084132670396">Cipher::getValidCipherText</a></div><div class="ttdeci">std::string getValidCipherText(const std::string &amp;s)</div><div class="ttdoc">Проверяет и возвращает валидный зашифрованный текст</div></div>
+<div class="ttc" id="aclassCipher_html_ae1e9c92f816c2dfda566a8c37e6bf740"><div class="ttname"><a href="classCipher.html#ae1e9c92f816c2dfda566a8c37e6bf740">Cipher::decrypt</a></div><div class="ttdeci">std::string decrypt(const std::string &amp;cipher_text)</div><div class="ttdoc">Дешифрует зашифрованный текст на основе таблицы</div><div class="ttdef"><b>Definition:</b> TableCipher.cpp:31</div></div>
+<div class="ttc" id="aclassCipher_html_ae728d0917db639dd49638a268298391f"><div class="ttname"><a href="classCipher.html#ae728d0917db639dd49638a268298391f">Cipher::Cipher</a></div><div class="ttdeci">Cipher()=delete</div><div class="ttdoc">Удаленный конструктор по умолчанию</div></div>
+<div class="ttc" id="aclassCipher_html_ae7adaed1ed80f539901b8e6285dd7cf4"><div class="ttname"><a href="classCipher.html#ae7adaed1ed80f539901b8e6285dd7cf4">Cipher::getValidKey</a></div><div class="ttdeci">int getValidKey(const int key, const std::string &amp;s)</div><div class="ttdoc">Проверяет и возвращает валидный ключ</div></div>
+<div class="ttc" id="aclassCipher_html_af6bf6f642447301a472641e210d4d309"><div class="ttname"><a href="classCipher.html#af6bf6f642447301a472641e210d4d309">Cipher::getValidOpenText</a></div><div class="ttdeci">std::string getValidOpenText(const std::string &amp;s)</div><div class="ttdoc">Проверяет и возвращает валидный открытый текст</div></div>
+<div class="ttc" id="aclasscipher__error_html"><div class="ttname"><a href="classcipher__error.html">cipher_error</a></div><div class="ttdoc">Пользовательское исключение для ошибок, связанных с шифром</div><div class="ttdef"><b>Definition:</b> TableCipher.h:83</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
